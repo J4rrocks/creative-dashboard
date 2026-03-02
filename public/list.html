@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>รายการคำขอ</title>
+</head>
+<body>
+  <h2>รายการคำขอทั้งหมด</h2>
+  <table border="1" id="table"></table>
+
+  <script>
+    fetch("/api/requests")
+      .then(res => res.json())
+      .then(data => {
+        let table = "<tr><th>ID</th><th>ร้าน</th><th>สินค้า</th><th>จำนวน</th><th>สถานะ</th></tr>";
+        data.forEach(r => {
+          table += `<tr>
+            <td>${r.id}</td>
+            <td>${r.store_name}</td>
+            <td>${r.product}</td>
+            <td>${r.quantity}</td>
+            <td>${r.status}</td>
+          </tr>`;
+        });
+        document.getElementById("table").innerHTML = table;
+      });
+  </script>
+
+  <br>
+  <a href="/">กลับไปฟอร์ม</a>
+</body>
+</html>

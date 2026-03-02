@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Creative Request Form</title>
+</head>
+<body>
+  <h2>ฟอร์มส่งคำขอสื่อ</h2>
+
+  <form action="/submit" method="POST">
+    <label>ชื่อร้าน:</label><br>
+    <input type="text" name="store_name" required><br><br>
+
+    <label>จังหวัด:</label><br>
+    <input type="text" name="province" required><br><br>
+
+    <label>สินค้า:</label><br>
+    <input type="text" name="product" required><br><br>
+
+    <label>ประเภทสื่อ:</label><br>
+    <input type="text" name="media_type" required><br><br>
+
+    <label>ขนาดกว้าง (cm):</label><br>
+    <input type="number" name="width"><br><br>
+
+    <label>ขนาดสูง (cm):</label><br>
+    <input type="number" name="height"><br><br>
+
+    <label>จำนวน:</label><br>
+    <input type="number" name="quantity"><br><br>
+
+    <label>วันที่ต้องใช้:</label><br>
+    <input type="date" name="due_date"><br><br>
+
+    <button type="submit">ส่งคำขอ</button>
+  </form>
+
+  <br>
+  <a href="/list.html">ดูรายการทั้งหมด</a>
+</body>
+</html>
